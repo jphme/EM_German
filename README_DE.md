@@ -1,16 +1,17 @@
 ![EM Logo](em_model_logo_web.jpeg)
 
-# EM German Model Family
+# EM German
+([English Version](README.md))
 
-([Zur deutschen Version](README_DE.md))
+**EM German (v01)** ist eine experimentelle, Llama2-basierte KI-Modellreihe, die in deutscher Sprache fine-getuned wurde. 
 
-**EM German (v01)** is an experimental llama2-based model family, finetuned on a large dataset of various instructions in German language. The models are optimized for German text, providing proficiency in understanding, generating, and interacting with German language content.
+Die Modelle sind für deutschen Text optimiert und können Inhalte in deutscher Sprache verstehen und generieren.
 
-**This 7b model has addtionally been pre-trained on >3bn high-quality tokens of German text**.
+**Dieses 7b-Modell wurde zusätzlich mit >3 Milliarden Token deutscher Texte vortrainiert**.
 
 # Links & Demos
 
-We will publish further instructions, updates and code-snippets in the project's [Github-Repo](https://github.com/jphme/EM_German).
+Im [Github-Repo](https://github.com/jphme/EM_German) Repo werde ich weitere Beispiele und Code-Snippets veröffentlichen.
 
 ## Model Links
 
@@ -21,37 +22,36 @@ We will publish further instructions, updates and code-snippets in the project's
 | 70b   | [Link](https://huggingface.co/jphme/em_german_70b_v01) | [Link](https://huggingface.co/jphme/em_german_70b_v01_gptq) | [Link](https://huggingface.co/jphme/em_german_70b_v01_gguf) | soon |
 | Mistral 7b | soon | soon | soon | tbc |
 
-## Demos:
+## Colab:
 
-You can use some of the models with **free** google Colab instances (e.g. the 7bn model in 8bit or the 13b model with GPTQ):
+Einige der Modelle können mit kostenlosen Google Colab-Instanzen verwendet werden (z.B. das 7b-Modell in 8-Bit oder das 13b-Modell mit GPTQ):
 
-* [Example Colab Notebook for 13b with GPTQ](https://colab.research.google.com/drive/1IJfJdVwGkfe5MYOqHptystR3FBeEUdGn?usp=sharing)
-* [Example Colab Notebook for 7b with 8bit-Loading](https://colab.research.google.com/drive/1bsv6vkLM4AlCpSyXA6ol9P32zxZmf7Zu?usp=sharing)
-* Further Examples for LLM apps will follow soon...
+* [Beispiel-Notebook 13b mit GPTQ](https://colab.research.google.com/drive/1IJfJdVwGkfe5MYOqHptystR3FBeEUdGn?usp=sharing)
+* [Beispiel-Notebook 7b mit 8-Bit](https://colab.research.google.com/drive/1bsv6vkLM4AlCpSyXA6ol9P32zxZmf7Zu?usp=sharing)
+* Weitere Beispiele für LLM-Apps folgen in Kürze...
 
+# Eingabeformat
 
-# Prompt Format
-
-This model follows the Vicuna format without linebreaks (but should work with linebreaks as well). The format is as follows:
+Dieses Modell folgt dem Vicuna-Format ohne Zeilenumbrüche (sollte aber auch mit Zeilenumbrüchen funktionieren). Das Format lautet wie folgt:
 
 ```
-Du bist ein hilfreicher Assistent. USER: <instruction> ASSISTANT:
+Du bist ein hilfreicher Assistent. USER: <Anweisung> ASSISTANT:
 ```
 
-You can swap the standard system prompt for a better suited one (see below for RAG-tasks).
+Sie können das Standard-Systemprompt aber auch ändern (siehe unten für ein Beispiel bei Aufgaben mit externen Datenbanken).
 
-# Results
+# Ergebnisse
 
-Attached a few example outputs. I also developed a few small German benchmarks (based on the Eleuther LM Evaluation Harness), which I will publish soon.
+Anbei einige Beispiele für Modell-Outputs. Wir werden demnächst einige kleine deutsche Benchmarks veröffentlichen (basierend auf dem Eleuther LM Evaluation Harness), die wir bei diesen Modellen bereits getstet haben.
 
-## Example Output
+## Beispiel-Ausgaben
 
 Prompt:
 ```
 Du bist ein hilfreicher Assistent USER: Ein Buch hat 500 Seiten. Jede Seite enthält 300 Wörter. Wie viele Wörter sind im gesamten Buch enthalten? ASSISTANT:
 ```
 
-Response EM 7b v01
+Antwort EM 7b v01
 ```
 Die Gesamtzahl der Wörter in dem Buch kann berechnet werden, indem man die Anzahl der Wörter pro Seite mit der Gesamtzahl der Seiten multipliziert.
 
@@ -65,7 +65,7 @@ Prompt:
 Du bist ein hilfreicher Assistent USER: Erläutere die Grundprinzipien der evolutionären Biologie und Genetik, indem du den Prozess der natürlichen Selektion, die Rolle von Mutationen und genetischer Drift sowie das Konzept der adaptiven Radiation erklärst. ASSISTANT:
 ```
 
-Response EM 7b v01
+Antwort EM 7b v01:
 ```
 Die Evolutionäre Biologie und Genetik sind zwei intim verwandte Disziplinen, die sich mit dem Studium des Verhaltens und der Entwicklung von Organismen in der Natur befassen. Sie untersuchen, wie Arten sich im Laufe der Zeit entwickeln und wie diese Veränderungen genetisch bedingt sind.
 
@@ -76,15 +76,13 @@ Die Evolutionäre Biologie und Genetik sind zwei intim verwandte Disziplinen, di
     3. Genetische Drift: Genetische Drift ist ein zufälliger Prozess, der durch die Verteilung von Allelen in einer Population stattfindet. Wenn eine Population kleiner wird oder wenn die Überlebens- und Fortpflanzungsraten zwischen den Individuen variieren, kann dies dazu führen, dass bestimmte Gene stärker oder weniger häufig werden. Dies kann dazu führen, dass die Population im Laufe der Zeit unterschiedliche Merkmale aufweist.
 
     4. Adaptive Radiation: Adaptive Radiation ist ein Prozess, bei dem eine Art mehrere verschiedene Linien auslässt, die sich auf verschiedene Weise an ihre Umgebung anpassen. Dies geschieht normalerweise, wenn die Umwelt sich ändert und die Art neue Fähigkeiten benötigt, um überleben zu können. Die verschiedenen Linien können dann unterschiedliche Eigenschaften entwickeln, die ihnen helfen, in dieser neuen Umgebung zu überleben.
-
-
 ```
 
-## Factual Retrieval / RAG
+## Sachliche Abfrage / RAG
 
-EM Models offer a special format for Factual Retrieval/RAG that is optimized for minimizing hallucinations. We use the same format as Airoboros for this:
+EM-Modelle bieten ein spezielles Format für RAG (also die Verwendung mit Informationen aus zusätzlichen externen Quellen wie Datenbanken oder Websiten), das für die Minimierung von Halluzinationen und Falscinformationen optimiert ist. Wir verwenden dasselbe Format wie Airoboros dafür.
 
-### Example
+### Beispiel
 
 Prompt
 ```
@@ -97,76 +95,47 @@ ENDINPUT
 BEGININSTRUCTION Was ist 1+1? ENDINSTRUCTION ASSISTANT:
 ```
 
-Model response:
-
+Modellantwort:
 ```
 Mit den gegebenen Informationen ist diese Frage nicht zu beantworten.
 ```
-Note that the model would normally always answer with the correct response to a trivial question like this but is trained to deny an answer, if there is no source between the BEGININPUT and ENDINPUT that provides a grounding.
 
-If we keep the same Context/Input but ask instead:
+Hier würde das Modell normalerweise die (triviale) Antwort (2) geben, ist aber trainiert, keine Antwort zu geben, wenn es keine Quelle zwischen BEGININPUT und ENDINPUT gibt, die eine belegbare Antwort liefert.
+
+Wenn wir anstattdessen fragen:
 ```
 BEGININSTRUCTION Wie wird das Wetter heute in Düsseldorf? Gebe die Quelle mit an! ENDINSTRUCTION ASSISTANT:
 ```
 
-We get the correct answer with the source:
+Bekommen wir die korrekte Antwort mit Quellenangabe
 
 ```
 Das Wetter in Düsseldorf wird heute schön und sonnig! (Quelle: Url: https://www.jph.me)
 ```
-
-
 # Evaluation
-I will publish some custom German benchmarks and the results for them soon.
 
-# Dataset
+coming soon
 
-The dataset is a mixture of multi-turn chats, retrieval instructions and synthetically generated instructions spawning many topics and applications.
+# Datensatz
 
+Der Datensatz ist eine Mischung aus Multi-Turn-Chats, RAG Instructions und synthetisch generierten Finetuning-Daten, die viele Themen und Anwendungen abdecken.
 
-## Use with tranformers
+# Einschränkungen & Vorurteile
 
-Unchanged from the base model:
+Dieses Modell kann sachlich falsche Ausgaben produzieren und sollte nur zu Forschubngszwecken verwendet werden.
 
-```python
-import torch
-from transformers import LlamaForCausalLM, LlamaTokenizer
+# Danksagungen:
 
-# Hugging Face model_path
-model_path = 'jphme/em_german_7b_v01'
-tokenizer = LlamaTokenizer.from_pretrained(model_path)
-model = LlamaForCausalLM.from_pretrained(
-    model_path, torch_dtype=torch.float16, device_map='auto',
-)
+Vielen Dank an [winglian/caseus](https://huggingface.co/winglian) für seine großartige Arbeit an Axolotl, die ich zur Schulung der EM-Modelle verwendet habe. Ich bin auch [Jon Durbin](https://huggingface.co/jondurbin) für seine Arioboros Modelle und Code-Schnipsel dankbar, von denen ich viele Ideen nutzen konnte.
 
-def ask_model(instruction, system='Du bist ein hilfreicher Assistent.'):
-    prompt=f"{system} USER: {instruction} ASSISTANT:"
-    input_tokens=tokenizer(prompt, return_tensors="pt").to(model.device)
-    output_tokens=model.generate(**input_tokens,  max_new_tokens=200)[0]
-    answer=tokenizer.decode(output_tokens, skip_special_tokens=True)
-    return answer
+Das 70b-Modell wurde mit Unterstützung des [OVH Cloud Startup Program](https://startup.ovhcloud.com/en/) trainiert.
 
-print(ask_model("Nenne mir 10 gute Gründe dafür, heute Sport zu machen!"))
-```
+# Kontakt
 
-# Limitations & Biases
+Wenn Sie an customized LLMs für geschäftliche Anwendungen interessiert sind, kontaktieren Sie mich bitte über [meine Website](https://www.jph.me). Ich freue mich auch immer über Anregungen und Feedback zu meinen Modellen.
 
-This model can produce factually incorrect output, and should not be relied on to produce factually accurate information.
-This model was trained on various public datasets. While great efforts have been taken to clean the pretraining data, it is possible that this model could generate lewd, biased or otherwise offensive outputs.
+*PS: Ich suche auch immer noch einen Co-Founder für unser Startup, das sich noch im Stealth-Modus befindet.*
 
-# Acknowledgements:
+# Haftungsausschluss:
 
-Many thanks to [winglian/caseus](https://huggingface.co/winglian) for his great work on Axolotl which I used to train the EM mdoels. I am also grateful to [Jon Durbin](https://huggingface.co/jondurbin) and his [Airoboros](https://huggingface.co/jondurbin/airoboros-l2-70b-2.2.1) models and code from which I borrowed many ideas and code snippets.
-
-The 70b model was trained with support of the [OVH Cloud Startup Program](https://startup.ovhcloud.com/en/).
-
-# Contact
-
-I you are interested in customized LLMs for business applications, please get in contact with me via [my website](https://www.jph.me). I am also always happy about suggestions and feedback.
-
-*PS: I am also still searching for a Co-Founder*.
-
-# Disclaimer:
-
-The license on this model does not constitute legal advice. I am not responsible for the actions of third parties who use this model.
-This model should only be used for research purposes. The original Llama2 license applies and is distributed with the model files.
+Ich bin nicht verantwortlich für die Handlungen Dritter, die dieses Modell verwenden. Dieses Modell sollte nur für Forschungszwecke verwendet werden. Die ursprüngliche Llama2-Lizenz gilt und wird mit den Modell-Dateien verteilt.

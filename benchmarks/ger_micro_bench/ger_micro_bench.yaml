@@ -1,0 +1,19 @@
+task: ger_micro_bench
+dataset_path: jphme/ger_micro_benchmark
+dataset_name: null
+output_type: multiple_choice
+training_split: null
+validation_split: null
+test_split: eval
+doc_to_text: "Frage: {{input}}"
+process_docs: !function utils.process_docs
+doc_to_target: 3
+doc_to_choice: "{{[distractor1, distractor2, distractor3, output, distractor4]}}"
+should_decontaminate: false
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+  - metric: acc_norm
+    aggregation: mean
+    higher_is_better: true

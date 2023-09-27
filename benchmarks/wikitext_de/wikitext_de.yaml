@@ -1,0 +1,19 @@
+group:
+  - perplexity
+  - loglikelihood_rolling
+task: wikitext_de
+dataset_path: jphme/wikitext_de_document_level_v01
+dataset_name:
+output_type: loglikelihood_rolling
+training_split:
+validation_split:
+test_split: test
+doc_to_text: ""
+doc_to_target: "{{text}}"
+process_results: !function process_results.process_results
+should_decontaminate: true
+doc_to_decontamination_query: "{{text}}"
+metric_list:
+  - metric: word_perplexity
+  - metric: byte_perplexity
+  - metric: bits_per_byte

@@ -1,0 +1,19 @@
+task: belebele_ger
+dataset_path: facebook/belebele
+dataset_name: deu_Latn
+output_type: multiple_choice
+training_split: null
+validation_split: null
+test_split: test
+doc_to_text: "{{flores_passage}}\nFrage: {{question}}\nAntwort:"
+process_docs: !function utils.process_docs
+doc_to_target: 3
+doc_to_choice: "{{[distractor1, distractor2, distractor3, correct_answer]}}"
+should_decontaminate: false
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+  - metric: acc_norm
+    aggregation: mean
+    higher_is_better: true
