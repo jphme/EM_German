@@ -24,8 +24,6 @@
 
 Die Modelle sind für deutschen Text optimiert und können Inhalte in deutscher Sprache verstehen und generieren. Alle Modelle stehen frei zum kostenlosen Download zur Verfügung und können lokal und ohne Internetzugriff genutzt werden.
 
-**Dieses 7b-Modell wurde zusätzlich mit >3 Milliarden Token deutscher Texte vortrainiert**.
-
 # Download & Demo
 
 Anbei finden sich die Links für die einzelnen Modelle zum Download. Sollten Sie keine Programmierkenntnisse haben und Ihnen die verschiedenen Modelle nichts sagen, folgen Sie am besten [dieser Anleitung](examples/LM_Studio/Anleitung.md) für eine lokale Installation mit grafischer Benutzeroberfläche.
