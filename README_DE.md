@@ -1,26 +1,53 @@
 ![EM Logo](em_model_logo_web.jpeg)
 
-# EM German
 ([English Version](README.md))
+
+# Inhalt
+
+- [Einleitung](#einleitung)
+- [Download und & Demos](#links--demos)
+  - [Model Links](#model-links)
+  - [Colab](#colab)
+- [Eingabeformat](#eingabeformat)
+- [Ergebnisse](#ergebnisse)
+  - [Beispiel-Ausgaben](#beispiel-ausgaben)
+  - [Sachliche Abfrage / RAG](#sachliche-abfrage--rag)
+  - [Evaluation](#evaluation)
+- [Datensatz](#datensatz)
+- [Danksagungen](#danksagungen)
+- [Kontakt](#kontakt)
+- [Haftungsausschluss](#haftungsausschluss)
+
+# Einleitung
 
 **EM German (v01)** ist eine experimentelle, Llama2-basierte KI-Modellreihe, die in deutscher Sprache fine-getuned wurde. 
 
-Die Modelle sind für deutschen Text optimiert und können Inhalte in deutscher Sprache verstehen und generieren.
+Die Modelle sind für deutschen Text optimiert und können Inhalte in deutscher Sprache verstehen und generieren. Alle Modelle stehen frei zum kostenlosen Download zur Verfügung und können lokal und ohne Internetzugriff genutzt werden.
 
 **Dieses 7b-Modell wurde zusätzlich mit >3 Milliarden Token deutscher Texte vortrainiert**.
 
-# Links & Demos
+# Download & Demo
 
-Im [Github-Repo](https://github.com/jphme/EM_German) Repo werde ich weitere Beispiele und Code-Snippets veröffentlichen.
+Anbei finden sich die Links für die einzelnen Modelle zum Download. Sollten Sie keine Programmierkenntnisse haben und Ihnen die verschiedenen Modelle nichts sagen, folgen Sie am besten [dieser Anleitung](examples/LM_Studio/Anleitung.md) für eine lokale Installation mit grafischer Benutzeroberfläche.
 
 ## Model Links
 
-|       | HF    | GPTQ  | GGUF  | AWQ   |
+| Base Model | HF    | GPTQ  | GGUF  | AWQ   |
 |-------|-------|-------|-------|-------|
-| 7b    | [Link](https://huggingface.co/jphme/em_german_7b_v01) | [Link](https://huggingface.co/jphme/em_german_7b_v01_gptq) | [Link](https://huggingface.co/jphme/em_german_7b_v01_gguf) | soon |
-| 13b   | [Link](https://huggingface.co/jphme/em_german_13b_v01) | [Link](https://huggingface.co/jphme/em_german_13b_v01_gptq) | [Link](https://huggingface.co/jphme/em_german_13b_v01_gguf) | soon |
-| 70b   | [Link](https://huggingface.co/jphme/em_german_70b_v01) | [Link](https://huggingface.co/jphme/em_german_70b_v01_gptq) | [Link](https://huggingface.co/jphme/em_german_70b_v01_gguf) | soon |
-| Mistral 7b | soon | soon | soon | tbc |
+| Llama2 7b   | [Link](https://huggingface.co/jphme/em_german_7b_v01) | [Link](https://huggingface.co/TheBloke/em_german_7b_v01-GPTQ) | [Link](https://huggingface.co/TheBloke/em_german_7b_v01-GGUF) | [Link](https://huggingface.co/TheBloke/em_german_7b_v01-AWQ) |
+| Llama2 13b  | [Link](https://huggingface.co/jphme/em_german_13b_v01) | [Link](https://huggingface.co/TheBloke/em_german_13b_v01-GPTQ) | [Link](https://huggingface.co/TheBloke/em_german_13b_v01-GGUF) | [Link](https://huggingface.co/TheBloke/em_german_13b_v01-AWQ) |
+| Llama2 70b   | [Link](https://huggingface.co/jphme/em_german_70b_v01) | [Link](https://huggingface.co/TheBloke/em_german_70b_v01-GPTQ) | [Link](https://huggingface.co/TheBloke/em_german_70b_v01-GGUF) | [Link](https://huggingface.co/TheBloke/em_german_70b_v01-AWQ) |
+| [Mistral 7b](https://huggingface.co/mistralai/Mistral-7B-v0.1) | [Link](https://huggingface.co/jphme/em_german_mistral_v01) | [Link](https://huggingface.co/TheBloke/em_german_mistral_v01-GPTQ) | [Link](https://huggingface.co/TheBloke/em_german_mistral_v01-GGUF) | [Link](https://huggingface.co/TheBloke/em_german_mistral_v01-AWQ) |
+| [LeoLM 7b](https://huggingface.co/LeoLM/leo-hessianai-7b) | [Link](https://huggingface.co/jphme/em_german_7b_leo) | [Link](https://huggingface.co/jphme/em_german_7b_leo_gptq) | [Link](hhttps://huggingface.co/jphme/em_german_7b_leo_gguf) | tbc |
+| LeoLM 13b | soon | soon | soon | tbc |
+
+### Hinweise zu den Modellversionen
+Für 7b Modelle empfehle ich die Nutzung der "LeoLM" Variante, wenn es um Texterzeugung geht und der "Mistral" Variante, wenn es um logisches Denken bzw. Verständnis geht. Beide performen nach vorläufigen Tests deutlich besser als das Llama2 7b Modell und teilweise auch besser als das Llama2 13b Modell.
+
+
+## LM Studio / GUI:
+
+Eine Anleitung, wie Sie mit den Modellen kostenlos auf Ihrem eigenen Rechner (keine Grafikkarte notwendig!) chatten können, findet sich [hier](examples/LM_Studio/Anleitung.md).
 
 ## Colab:
 
@@ -28,11 +55,11 @@ Einige der Modelle können mit kostenlosen Google Colab-Instanzen verwendet werd
 
 * [Beispiel-Notebook 13b mit GPTQ](https://colab.research.google.com/drive/1IJfJdVwGkfe5MYOqHptystR3FBeEUdGn?usp=sharing)
 * [Beispiel-Notebook 7b mit 8-Bit](https://colab.research.google.com/drive/1bsv6vkLM4AlCpSyXA6ol9P32zxZmf7Zu?usp=sharing)
-* Weitere Beispiele für LLM-Apps folgen in Kürze...
+
 
 # Eingabeformat
 
-Dieses Modell folgt dem Vicuna-Format ohne Zeilenumbrüche (sollte aber auch mit Zeilenumbrüchen funktionieren). Das Format lautet wie folgt:
+Dieses Modell folgt dem sogennanten "Vicuna-Format" ohne Zeilenumbrüche (sollte aber auch mit Zeilenumbrüchen funktionieren). Das Format lautet wie folgt:
 
 ```
 Du bist ein hilfreicher Assistent. USER: <Anweisung> ASSISTANT:
@@ -120,21 +147,18 @@ coming soon
 
 Der Datensatz ist eine Mischung aus Multi-Turn-Chats, RAG Instructions und synthetisch generierten Finetuning-Daten, die viele Themen und Anwendungen abdecken.
 
-# Einschränkungen & Vorurteile
-
-Dieses Modell kann sachlich falsche Ausgaben produzieren und sollte nur zu Forschubngszwecken verwendet werden.
 
 # Danksagungen:
 
-Vielen Dank an [winglian/caseus](https://huggingface.co/winglian) für seine großartige Arbeit an Axolotl, die ich zur Schulung der EM-Modelle verwendet habe. Ich bin auch [Jon Durbin](https://huggingface.co/jondurbin) für seine Arioboros Modelle und Code-Schnipsel dankbar, von denen ich viele Ideen nutzen konnte.
-
+Vielen Dank an [winglian](https://huggingface.co/winglian) für seine großartige Arbeit an Axolotl, die ich zur Schulung der EM-Modelle verwendet habe. Ich bin auch [Jon Durbin](https://huggingface.co/jondurbin) für seine Arioboros Modelle und Code-Schnipsel dankbar, von denen ich viele Ideen nutzen konnte.
+Vielen Dank außerdem an [Björn Plüster](https://huggingface.co/bjoernp) und das LeoLM Team für das hervorragende LeoLM-Modell und natürlich an [TheBloke](https://huggingface.co/TheBloke) für die Bereitstellung der quantisierten Modelle in allen erdenklichen Formaten.
 Das 70b-Modell wurde mit Unterstützung des [OVH Cloud Startup Program](https://startup.ovhcloud.com/en/) trainiert.
 
 # Kontakt
 
 Wenn Sie an customized LLMs für geschäftliche Anwendungen interessiert sind, kontaktieren Sie mich bitte über [meine Website](https://www.jph.me). Ich freue mich auch immer über Anregungen und Feedback zu meinen Modellen.
 
-*PS: Ich suche auch immer noch einen Co-Founder für unser Startup, das sich noch im Stealth-Modus befindet.*
+*PS: Ich suche auch immer noch Mitstreiter für unser Startup ellamind, das kommerzielle Lösungen zur Prozessautomatisierung auf Basis von LLMs anbieten wird (Derzeit noch im Stealth-Modus).*
 
 # Haftungsausschluss:
 

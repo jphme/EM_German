@@ -1,33 +1,60 @@
 ![EM Logo](em_model_logo_web.jpeg)
 
-# EM German Model Family
-
 ([Zur deutschen Version](README_DE.md))
+
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Download & Demos](#download--demos)
+    - [Model Links](#model-links)
+    - [Demos](#demos)
+    - [LM Studio / GUI](#lm-studio--gui)
+3. [Prompt Format](#prompt-format)
+4. [Results](#results)
+    - [Example Output](#example-output)
+5. [Factual Retrieval / RAG](#factual-retrieval--rag)
+    - [Example](#example)
+6. [Evaluation](#evaluation)
+7. [Dataset](#dataset)
+8. [Use with Transformers](#use-with-transformers)
+9. [Limitations & Biases](#limitations--biases)
+10. [Acknowledgements](#acknowledgements)
+11. [Contact](#contact)
+12. [Disclaimer](#disclaimer)
+
+# Introduction
 
 **EM German (v01)** is an experimental llama2-based model family, finetuned on a large dataset of various instructions in German language. The models are optimized for German text, providing proficiency in understanding, generating, and interacting with German language content.
 
-**This 7b model has addtionally been pre-trained on >3bn high-quality tokens of German text**.
+All models are freely available. We offer versions based on 7b, 13b and 70b Llama-2, Mistral and LeoLM (Llama-2 with continued pretraining on German texts).
 
-# Links & Demos
-
-We will publish further instructions, updates and code-snippets in the project's [Github-Repo](https://github.com/jphme/EM_German).
+# Download & Demos
 
 ## Model Links
 
-|       | HF    | GPTQ  | GGUF  | AWQ   |
+| Base Model | HF    | GPTQ  | GGUF  | AWQ   |
 |-------|-------|-------|-------|-------|
-| 7b    | [Link](https://huggingface.co/jphme/em_german_7b_v01) | [Link](https://huggingface.co/jphme/em_german_7b_v01_gptq) | [Link](https://huggingface.co/jphme/em_german_7b_v01_gguf) | soon |
-| 13b   | [Link](https://huggingface.co/jphme/em_german_13b_v01) | [Link](https://huggingface.co/jphme/em_german_13b_v01_gptq) | [Link](https://huggingface.co/jphme/em_german_13b_v01_gguf) | soon |
-| 70b   | [Link](https://huggingface.co/jphme/em_german_70b_v01) | [Link](https://huggingface.co/jphme/em_german_70b_v01_gptq) | [Link](https://huggingface.co/jphme/em_german_70b_v01_gguf) | soon |
-| Mistral 7b | soon | soon | soon | tbc |
+| Llama2 7b   | [Link](https://huggingface.co/jphme/em_german_7b_v01) | [Link](https://huggingface.co/TheBloke/em_german_7b_v01-GPTQ) | [Link](https://huggingface.co/TheBloke/em_german_7b_v01-GGUF) | [Link](https://huggingface.co/TheBloke/em_german_7b_v01-AWQ) |
+| Llama2 13b  | [Link](https://huggingface.co/jphme/em_german_13b_v01) | [Link](https://huggingface.co/TheBloke/em_german_13b_v01-GPTQ) | [Link](https://huggingface.co/TheBloke/em_german_13b_v01-GGUF) | [Link](https://huggingface.co/TheBloke/em_german_13b_v01-AWQ) |
+| Llama2 70b   | [Link](https://huggingface.co/jphme/em_german_70b_v01) | [Link](https://huggingface.co/TheBloke/em_german_70b_v01-GPTQ) | [Link](https://huggingface.co/TheBloke/em_german_70b_v01-GGUF) | [Link](https://huggingface.co/TheBloke/em_german_70b_v01-AWQ) |
+| [Mistral 7b](https://huggingface.co/mistralai/Mistral-7B-v0.1) | [Link](https://huggingface.co/jphme/em_german_mistral_v01) | [Link](https://huggingface.co/TheBloke/em_german_mistral_v01-GPTQ) | [Link](https://huggingface.co/TheBloke/em_german_mistral_v01-GGUF) | [Link](https://huggingface.co/TheBloke/em_german_mistral_v01-AWQ) |
+| [LeoLM 7b](https://huggingface.co/LeoLM/leo-hessianai-7b) | [Link](https://huggingface.co/jphme/em_german_7b_leo) | [Link](https://huggingface.co/jphme/em_german_7b_leo_gptq) | [Link](hhttps://huggingface.co/jphme/em_german_7b_leo_gguf) | tbc |
+| LeoLM 13b | soon | soon | soon | tbc |
 
+### Notes about the different versions:
+For the 7b models, we recommend the use of the "LeoLM" variant if text output quality is important and the Mistral variant, if reasoning/understanding is the main priority. Both should give better results than the Llama-2 7b model.
+
+If you get unsatisfying results with one or another EM German version, please try a different (and/or larger) model or version for your usecase.
 ## Demos:
 
 You can use some of the models with **free** google Colab instances (e.g. the 7bn model in 8bit or the 13b model with GPTQ):
 
 * [Example Colab Notebook for 13b with GPTQ](https://colab.research.google.com/drive/1IJfJdVwGkfe5MYOqHptystR3FBeEUdGn?usp=sharing)
 * [Example Colab Notebook for 7b with 8bit-Loading](https://colab.research.google.com/drive/1bsv6vkLM4AlCpSyXA6ol9P32zxZmf7Zu?usp=sharing)
-* Further Examples for LLM apps will follow soon...
+
+## LM Studio / GUI:
+
+We also prepared a short tutorial for the use with a GUI (LM Studio) [here](examples/LM_Studio/Anleitung.md)(German).
 
 
 # Prompt Format
@@ -157,14 +184,14 @@ This model was trained on various public datasets. While great efforts have been
 # Acknowledgements:
 
 Many thanks to [winglian/caseus](https://huggingface.co/winglian) for his great work on Axolotl which I used to train the EM mdoels. I am also grateful to [Jon Durbin](https://huggingface.co/jondurbin) and his [Airoboros](https://huggingface.co/jondurbin/airoboros-l2-70b-2.2.1) models and code from which I borrowed many ideas and code snippets.
-
+Additionally many thanks to [Björn Plüster](https://huggingface.co/bjoernp) and the LeoLM team for the outstanding pretraining work on LeoLM and last but not least many many thanks to [TheBloke](https://huggingface.co/TheBloke) for the preparation of quantized versions in all formats under the sun.
 The 70b model was trained with support of the [OVH Cloud Startup Program](https://startup.ovhcloud.com/en/).
 
 # Contact
 
 I you are interested in customized LLMs for business applications, please get in contact with me via [my website](https://www.jph.me). I am also always happy about suggestions and feedback.
 
-*PS: I am also still searching for a Co-Founder*.
+*PS: We are also always interested in support for our startup ellamind, which will offer customized models for business applications in the future (currently still in stealth mode). Please get in touch if you are interested!*
 
 # Disclaimer:
 

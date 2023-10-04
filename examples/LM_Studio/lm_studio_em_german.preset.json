@@ -1,0 +1,42 @@
+{
+  "name": "lm_studio_em_german_config",
+  "load_params": {
+    "n_ctx": 4096,
+    "n_batch": 512,
+    "rope_freq_base": 10000,
+    "rope_freq_scale": 1,
+    "tensor_split": [
+      0
+    ],
+    "seed": -1,
+    "f16_kv": true,
+    "use_mmap": true
+  },
+  "inference_params": {
+    "n_predict": -1,
+    "top_k": 40,
+    "top_p": 0.95,
+    "temp": 0.6,
+    "repeat_penalty": 1.2,
+    "input_prefix": "USER:",
+    "input_suffix": "ASSISTANT:",
+    "antiprompt": [
+      "USER:"
+    ],
+    "pre_prompt": "Du bist ein hilfreicher Assistent.",
+    "seed": -1,
+    "tfs_z": 1,
+    "typical_p": 1,
+    "repeat_last_n": 64,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    "n_keep": 0,
+    "logit_bias": {},
+    "mirostat": 0,
+    "mirostat_tau": 5,
+    "mirostat_eta": 0.1,
+    "memory_f16": true,
+    "multiline_input": false,
+    "penalize_nl": true
+  }
+}
