@@ -53,7 +53,7 @@ Einige der Modelle können mit kostenlosen Google Colab-Instanzen verwendet werd
 
 * [Beispiel-Notebook 13b mit GPTQ](https://colab.research.google.com/drive/1IJfJdVwGkfe5MYOqHptystR3FBeEUdGn?usp=sharing)
 * [Beispiel-Notebook 7b mit 8-Bit](https://colab.research.google.com/drive/1bsv6vkLM4AlCpSyXA6ol9P32zxZmf7Zu?usp=sharing)
-
+* [Beispiel-Notebook 7b Mistral GGUF mit Grammar-based structured Output](https://colab.research.google.com/drive/17O-a3D4BnVc_V9Of3dFfed18v1ULu1Sv?usp=sharing)
 
 # Eingabeformat
 
@@ -102,6 +102,17 @@ Die Evolutionäre Biologie und Genetik sind zwei intim verwandte Disziplinen, di
 
     4. Adaptive Radiation: Adaptive Radiation ist ein Prozess, bei dem eine Art mehrere verschiedene Linien auslässt, die sich auf verschiedene Weise an ihre Umgebung anpassen. Dies geschieht normalerweise, wenn die Umwelt sich ändert und die Art neue Fähigkeiten benötigt, um überleben zu können. Die verschiedenen Linien können dann unterschiedliche Eigenschaften entwickeln, die ihnen helfen, in dieser neuen Umgebung zu überleben.
 ```
+
+## Beispiel für grammar-based structured Output mit GGUF
+
+Prompt:
+> "Max ging im Jahr, als die Corona-Krise startete, in die Stadt mit dem Eiffelturm."
+
+EM German Mistral 7b GGUF Q8_0:
+```python
+{'jahr': 2020, 'name': 'Paris', 'ort': 'Frankreich'}
+```
+(siehe [Beispiel Notebook](https://colab.research.google.com/drive/17O-a3D4BnVc_V9Of3dFfed18v1ULu1Sv?usp=sharing) für details).
 
 ## Sachliche Abfrage / RAG
 
