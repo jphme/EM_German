@@ -106,7 +106,7 @@ Die Evolutionäre Biologie und Genetik sind zwei intim verwandte Disziplinen, di
     4. Adaptive Radiation: Adaptive Radiation ist ein Prozess, bei dem eine Art mehrere verschiedene Linien auslässt, die sich auf verschiedene Weise an ihre Umgebung anpassen. Dies geschieht normalerweise, wenn die Umwelt sich ändert und die Art neue Fähigkeiten benötigt, um überleben zu können. Die verschiedenen Linien können dann unterschiedliche Eigenschaften entwickeln, die ihnen helfen, in dieser neuen Umgebung zu überleben.
 ```
 
-### Example for grammar-based structured Output with GGUF
+## Grammar-based structured Output with GGUF
 
 Prompt:
 > "Max ging im Jahr, als die Corona-Krise startete, in die Stadt mit dem Eiffelturm."
@@ -120,8 +120,6 @@ EM German Mistral 7b GGUF Q8_0:
 ## Factual Retrieval / RAG
 
 EM Models offer a special format for Factual Retrieval/RAG that is optimized for minimizing hallucinations. We use the same format as Airoboros for this:
-
-### Example
 
 Prompt
 ```
