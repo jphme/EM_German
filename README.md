@@ -72,7 +72,7 @@ You can swap the standard system prompt for a better suited one (see below for R
 
 Attached a few example outputs. I also developed a few small German benchmarks (based on the Eleuther LM Evaluation Harness), which I will publish soon.
 
-## Example Output
+## General Prompts
 
 Prompt:
 ```
@@ -152,6 +152,7 @@ Das Wetter in Düsseldorf wird heute schön und sonnig! (Quelle: Url: https://ww
 
 
 # Evaluation
+
 I will publish some custom German benchmarks and the results for them soon.
 
 # Dataset
