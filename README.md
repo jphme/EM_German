@@ -12,7 +12,7 @@
 3. [Prompt Format](#prompt-format)
 4. [Results](#results)
     - [General Prompts](#general-prompts)
-    - [Grammar-based structured Output with GGUF](#grammar-based)
+    - [Grammar-based structured Output with GGUF](#grammar-based-structured-output-with-gguf)
     - [Factual Retrieval / RAG](#factual-retrieval--rag)
 6. [Evaluation](#evaluation)
 7. [Dataset](#dataset)
