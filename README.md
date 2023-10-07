@@ -11,9 +11,9 @@
     - [LM Studio / GUI](#lm-studio--gui)
 3. [Prompt Format](#prompt-format)
 4. [Results](#results)
-    - [Example Output](#example-output)
-5. [Factual Retrieval / RAG](#factual-retrieval--rag)
-    - [Example](#example)
+    - [General Prompts](#general-prompts)
+    - [Grammar-based structured Output with GGUF](#grammar-based-structured-output-with-gguf)
+    - [Factual Retrieval / RAG](#factual-retrieval--rag)
 6. [Evaluation](#evaluation)
 7. [Dataset](#dataset)
 8. [Use with Transformers](#use-with-transformers)
@@ -72,7 +72,7 @@ You can swap the standard system prompt for a better suited one (see below for R
 
 Attached a few example outputs. I also developed a few small German benchmarks (based on the Eleuther LM Evaluation Harness), which I will publish soon.
 
-## Example Output
+## General Prompts
 
 Prompt:
 ```
@@ -106,7 +106,7 @@ Die Evolutionäre Biologie und Genetik sind zwei intim verwandte Disziplinen, di
     4. Adaptive Radiation: Adaptive Radiation ist ein Prozess, bei dem eine Art mehrere verschiedene Linien auslässt, die sich auf verschiedene Weise an ihre Umgebung anpassen. Dies geschieht normalerweise, wenn die Umwelt sich ändert und die Art neue Fähigkeiten benötigt, um überleben zu können. Die verschiedenen Linien können dann unterschiedliche Eigenschaften entwickeln, die ihnen helfen, in dieser neuen Umgebung zu überleben.
 ```
 
-### Example for grammar-based structured Output with GGUF
+## Grammar-based structured Output with GGUF
 
 Prompt:
 > "Max ging im Jahr, als die Corona-Krise startete, in die Stadt mit dem Eiffelturm."
@@ -120,8 +120,6 @@ EM German Mistral 7b GGUF Q8_0:
 ## Factual Retrieval / RAG
 
 EM Models offer a special format for Factual Retrieval/RAG that is optimized for minimizing hallucinations. We use the same format as Airoboros for this:
-
-### Example
 
 Prompt
 ```
@@ -154,6 +152,7 @@ Das Wetter in Düsseldorf wird heute schön und sonnig! (Quelle: Url: https://ww
 
 
 # Evaluation
+
 I will publish some custom German benchmarks and the results for them soon.
 
 # Dataset
