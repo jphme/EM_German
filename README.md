@@ -32,6 +32,8 @@ All models are freely available. We offer versions based on 7b, 13b and 70b Llam
 
 ## Model Links
 
+Should you try only one model version, I strongly recommend the **LeoLM Mistral** model which offers by far the best combination of performance and computing requirements!
+
 | Base Model | HF    | GPTQ  | GGUF  | AWQ   |
 |-------|-------|-------|-------|-------|
 | Llama2 7b   | [Link](https://huggingface.co/jphme/em_german_7b_v01) | [Link](https://huggingface.co/TheBloke/em_german_7b_v01-GPTQ) | [Link](https://huggingface.co/TheBloke/em_german_7b_v01-GGUF) | [Link](https://huggingface.co/TheBloke/em_german_7b_v01-AWQ) |
@@ -39,12 +41,11 @@ All models are freely available. We offer versions based on 7b, 13b and 70b Llam
 | Llama2 70b   | [Link](https://huggingface.co/jphme/em_german_70b_v01) | [Link](https://huggingface.co/TheBloke/em_german_70b_v01-GPTQ) | [Link](https://huggingface.co/TheBloke/em_german_70b_v01-GGUF) | [Link](https://huggingface.co/TheBloke/em_german_70b_v01-AWQ) |
 | [Mistral 7b](https://huggingface.co/mistralai/Mistral-7B-v0.1) | [Link](https://huggingface.co/jphme/em_german_mistral_v01) | [Link](https://huggingface.co/TheBloke/em_german_mistral_v01-GPTQ) | [Link](https://huggingface.co/TheBloke/em_german_mistral_v01-GGUF) | [Link](https://huggingface.co/TheBloke/em_german_mistral_v01-AWQ) |
 | [LeoLM 7b](https://huggingface.co/LeoLM/leo-hessianai-7b) | [Link](https://huggingface.co/jphme/em_german_7b_leo) | [Link](https://huggingface.co/jphme/em_german_7b_leo_gptq) | [Link](hhttps://huggingface.co/jphme/em_german_7b_leo_gguf) | tbc |
-| LeoLM 13b | soon | soon | soon | tbc |
+| [LeoLM 13b](https://huggingface.co/LeoLM/leo-hessianai-13b) | soon | soon | [Link](https://huggingface.co/jphme/em_german_13b_leo_gguf) | tbc |
+| [LeoLM Mistral](tbc) | [Link](https://huggingface.co/jphme/em_german_leo_mistral) | soon | [Link](https://huggingface.co/jphme/em_german_leo_mistral_gguf) | tbc |
 
 ### Notes about the different versions:
-For the 7b models, we recommend the use of the "LeoLM" variant if text output quality is important and the Mistral variant, if reasoning/understanding is the main priority. Both should give better results than the Llama-2 7b model.
-
-If you get unsatisfying results with one or another EM German version, please try a different (and/or larger) model or version for your usecase.
+See also the [comparison of example outputs](example_output_comparison.md) for a comparison of (7b) model capabilities.
 ## Demos:
 
 You can use some of the models with **free** google Colab instances (e.g. the 7bn model in 8bit or the 13b model with GPTQ):
@@ -71,6 +72,7 @@ You can swap the standard system prompt for a better suited one (see below for R
 # Results
 
 Attached a few example outputs. I also developed a few small German benchmarks (based on the Eleuther LM Evaluation Harness), which I will publish soon.
+More output examples and a comparison between the different model variants can be found [here (German)](example_output_comparison.md).
 
 ## General Prompts
 

@@ -30,6 +30,8 @@ Anbei finden sich die Links für die einzelnen Modelle zum Download. Sollten Sie
 
 ## Model Links
 
+Sollten Sie nur ein Modell ausprobieren, empfehle ich stark das **LeoLM Mistral** Modell, was mit Abstand die beste Kombination von Performance und Ressourcenanforderungen bietet!
+
 | Base Model | HF    | GPTQ  | GGUF  | AWQ   |
 |-------|-------|-------|-------|-------|
 | Llama2 7b   | [Link](https://huggingface.co/jphme/em_german_7b_v01) | [Link](https://huggingface.co/TheBloke/em_german_7b_v01-GPTQ) | [Link](https://huggingface.co/TheBloke/em_german_7b_v01-GGUF) | [Link](https://huggingface.co/TheBloke/em_german_7b_v01-AWQ) |
@@ -37,10 +39,11 @@ Anbei finden sich die Links für die einzelnen Modelle zum Download. Sollten Sie
 | Llama2 70b   | [Link](https://huggingface.co/jphme/em_german_70b_v01) | [Link](https://huggingface.co/TheBloke/em_german_70b_v01-GPTQ) | [Link](https://huggingface.co/TheBloke/em_german_70b_v01-GGUF) | [Link](https://huggingface.co/TheBloke/em_german_70b_v01-AWQ) |
 | [Mistral 7b](https://huggingface.co/mistralai/Mistral-7B-v0.1) | [Link](https://huggingface.co/jphme/em_german_mistral_v01) | [Link](https://huggingface.co/TheBloke/em_german_mistral_v01-GPTQ) | [Link](https://huggingface.co/TheBloke/em_german_mistral_v01-GGUF) | [Link](https://huggingface.co/TheBloke/em_german_mistral_v01-AWQ) |
 | [LeoLM 7b](https://huggingface.co/LeoLM/leo-hessianai-7b) | [Link](https://huggingface.co/jphme/em_german_7b_leo) | [Link](https://huggingface.co/jphme/em_german_7b_leo_gptq) | [Link](hhttps://huggingface.co/jphme/em_german_7b_leo_gguf) | tbc |
-| LeoLM 13b | soon | soon | soon | tbc |
+| [LeoLM 13b](https://huggingface.co/LeoLM/leo-hessianai-13b) | soon | soon | [Link](https://huggingface.co/jphme/em_german_13b_leo_gguf) | tbc |
+| [LeoLM Mistral](tbc) | [Link](https://huggingface.co/jphme/em_german_leo_mistral) | soon | [Link](https://huggingface.co/jphme/em_german_leo_mistral_gguf) | tbc |
 
 ### Hinweise zu den Modellversionen
-Für 7b Modelle empfehle ich die Nutzung der "LeoLM" Variante, wenn es um Texterzeugung geht und der "Mistral" Variante, wenn es um logisches Denken bzw. Verständnis geht. Beide performen nach vorläufigen Tests deutlich besser als das Llama2 7b Modell und teilweise auch besser als das Llama2 13b Modell.
+Grundsätzlich empfehle ich die **Leo Mistral* Variante. Für einen Vergleich der verschiedenen (7b) Versionen anhand Beispielprompts, siehe [hier](example_output_comparison.md).
 
 
 ## LM Studio / GUI:
@@ -68,6 +71,7 @@ Sie können das Standard-Systemprompt aber auch ändern (siehe unten für ein Be
 # Ergebnisse
 
 Anbei einige Beispiele für Modell-Outputs. Wir werden demnächst einige kleine deutsche Benchmarks veröffentlichen (basierend auf dem Eleuther LM Evaluation Harness), die wir bei diesen Modellen bereits getstet haben.
+Mehr Beispiele und Vergleiche zwischen den verschiedenen Modell-Versionen finden Sie [hier](example_output_comparison.md). 
 
 ## Beispiel-Ausgaben
 
