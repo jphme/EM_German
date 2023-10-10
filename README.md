@@ -26,7 +26,7 @@
 
 **EM German (v01)** is an experimental llama2-based model family, finetuned on a large dataset of various instructions in German language. The models are optimized for German text, providing proficiency in understanding, generating, and interacting with German language content.
 
-All models are freely available. We offer versions based on 7b, 13b and 70b Llama-2, Mistral and LeoLM (Llama-2 with continued pretraining on German texts).
+All models are freely available. We offer versions based on 7b, 13b and 70b Llama-2, Mistral and LeoLM (Llama-2 with continued pretraining on German texts) models.
 
 # Download & Demos
 
@@ -42,7 +42,7 @@ Should you try only one model version, I strongly recommend the **LeoLM Mistral*
 | [Mistral 7b](https://huggingface.co/mistralai/Mistral-7B-v0.1) | [Link](https://huggingface.co/jphme/em_german_mistral_v01) | [Link](https://huggingface.co/TheBloke/em_german_mistral_v01-GPTQ) | [Link](https://huggingface.co/TheBloke/em_german_mistral_v01-GGUF) | [Link](https://huggingface.co/TheBloke/em_german_mistral_v01-AWQ) |
 | [LeoLM 7b](https://huggingface.co/LeoLM/leo-hessianai-7b) | [Link](https://huggingface.co/jphme/em_german_7b_leo) | [Link](https://huggingface.co/jphme/em_german_7b_leo_gptq) | [Link](hhttps://huggingface.co/jphme/em_german_7b_leo_gguf) | tbc |
 | [LeoLM 13b](https://huggingface.co/LeoLM/leo-hessianai-13b) | soon | soon | [Link](https://huggingface.co/jphme/em_german_13b_leo_gguf) | tbc |
-| [LeoLM Mistral](tbc) | [Link](https://huggingface.co/jphme/em_german_leo_mistral) | soon | [Link](https://huggingface.co/jphme/em_german_leo_mistral_gguf) | tbc |
+| [LeoLM Mistral](https://huggingface.co/LeoLM/leo-mistral-hessianai-7b) | [Link](https://huggingface.co/jphme/em_german_leo_mistral) | [Link](https://huggingface.co/TheBloke/em_german_leo_mistral-GPTQ) | [Link](https://huggingface.co/TheBloke/em_german_leo_mistral-GGUF) | [Link](https://huggingface.co/TheBloke/em_german_leo_mistral-AWQ) |
 
 ### Notes about the different versions:
 See also the [comparison of example outputs](example_output_comparison.md) for a comparison of (7b) model capabilities.
