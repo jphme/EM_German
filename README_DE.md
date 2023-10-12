@@ -40,15 +40,25 @@ Sollten Sie nur ein Modell ausprobieren, empfehle ich stark das **LeoLM Mistral*
 | [Mistral 7b](https://huggingface.co/mistralai/Mistral-7B-v0.1) | [Link](https://huggingface.co/jphme/em_german_mistral_v01) | [Link](https://huggingface.co/TheBloke/em_german_mistral_v01-GPTQ) | [Link](https://huggingface.co/TheBloke/em_german_mistral_v01-GGUF) | [Link](https://huggingface.co/TheBloke/em_german_mistral_v01-AWQ) |
 | [LeoLM 7b](https://huggingface.co/LeoLM/leo-hessianai-7b) | [Link](https://huggingface.co/jphme/em_german_7b_leo) | [Link](https://huggingface.co/jphme/em_german_7b_leo_gptq) | [Link](hhttps://huggingface.co/jphme/em_german_7b_leo_gguf) | tbc |
 | [LeoLM 13b](https://huggingface.co/LeoLM/leo-hessianai-13b) | soon | soon | [Link](https://huggingface.co/jphme/em_german_13b_leo_gguf) | tbc |
-| [LeoLM Mistral](tbc) | [Link](https://huggingface.co/jphme/em_german_leo_mistral) | soon | [Link](https://huggingface.co/jphme/em_german_leo_mistral_gguf) | tbc |
+| [LeoLM Mistral](https://huggingface.co/LeoLM/leo-mistral-hessianai-7b) | [Link](https://huggingface.co/jphme/em_german_leo_mistral) | [Link](https://huggingface.co/TheBloke/em_german_leo_mistral-GPTQ) | [Link](https://huggingface.co/TheBloke/em_german_leo_mistral-GGUF) | [Link](https://huggingface.co/TheBloke/em_german_leo_mistral-AWQ) |
 
 ### Hinweise zu den Modellversionen
 Grundsätzlich empfehle ich die **Leo Mistral* Variante. Für einen Vergleich der verschiedenen (7b) Versionen anhand Beispielprompts, siehe [hier](example_output_comparison.md).
 
+## Grafische Benutzeroberfläche
+Anbei Anleitungen/Links für eine Nutzung der EM German Modelle mit grafischer Benutzeroberfläche:
+### LM Studio
 
-## LM Studio / GUI:
+Eine Anleitung zur Nutzung auf dem eigenen Rechner (Windows/Mac) mit LM Studio findet sich [hier](examples/LM_Studio/Anleitung.md).
 
-Eine Anleitung, wie Sie mit den Modellen kostenlos auf Ihrem eigenen Rechner (keine Grafikkarte notwendig!) chatten können, findet sich [hier](examples/LM_Studio/Anleitung.md).
+### GPT4All
+
+EM German Mistral (non-LeoLM) wird ab Version 2.5 (derzeit im pre-release) auch offiztiell von [GPT4All](https://gpt4all.io/index.html) unterstützt.
+Die pre-release Version kann man hier downloaden:
+* [Windows](https://gpt4all.io/installers_offline/gpt4all-installer-win64-v2.5.0-pre1.exe)
+* [MacOS](https://gpt4all.io/installers_offline/gpt4all-installer-darwin-v2.5.0-pre1.dmg)
+* [Linux](https://gpt4all.io/installers_offline/gpt4all-installer-linux-v2.5.0-pre1.run)
+
 
 ## Colab:
 

@@ -8,7 +8,7 @@
 2. [Download & Demos](#download--demos)
     - [Model Links](#model-links)
     - [Demos](#demos)
-    - [LM Studio / GUI](#lm-studio--gui)
+    - [GUI](#gui)
 3. [Prompt Format](#prompt-format)
 4. [Results](#results)
     - [General Prompts](#general-prompts)
@@ -54,9 +54,19 @@ You can use some of the models with **free** google Colab instances (e.g. the 7b
 * [Example Colab Notebook for 7b with 8bit-Loading](https://colab.research.google.com/drive/1bsv6vkLM4AlCpSyXA6ol9P32zxZmf7Zu?usp=sharing)
 * [Example Colab Notebook for 7b Mistral GGUF with Grammar-based structured output](https://colab.research.google.com/drive/17O-a3D4BnVc_V9Of3dFfed18v1ULu1Sv?usp=sharing)
 
-## LM Studio / GUI:
+## GUI
+For use with a graphical user interface, please see the following instructions:
+### LM Studio
 
-We also prepared a short tutorial for the use with a GUI (LM Studio) [here](examples/LM_Studio/Anleitung.md)(German).
+We prepared a short tutorial for the use with a GUI (LM Studio) [here](examples/LM_Studio/Anleitung.md)(German).
+
+### GPT4All
+
+EM German Mistral (non-LeoLM) is also supported out-of-the-box in the newest version (2.5+) of [GPT4All](https://gpt4all.io/index.html).
+You can download the pre-release here:
+* [Windows](https://gpt4all.io/installers_offline/gpt4all-installer-win64-v2.5.0-pre1.exe)
+* [MacOS](https://gpt4all.io/installers_offline/gpt4all-installer-darwin-v2.5.0-pre1.dmg)
+* [Linux](https://gpt4all.io/installers_offline/gpt4all-installer-linux-v2.5.0-pre1.run)
 
 
 # Prompt Format
