@@ -144,6 +144,8 @@ ENDINPUT
 BEGININSTRUCTION Was ist 1+1? ENDINSTRUCTION ASSISTANT:
 ```
 
+*Note: Unfortunately, a typo has sneaked in during training ("ENDINCSTRUCTION"), which will be corrected in the next model version. For optimal performance, the typo should be adopted in the prompt.*
+
 Model response:
 
 ```
