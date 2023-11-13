@@ -145,6 +145,8 @@ ENDINPUT
 BEGININSTRUCTION Was ist 1+1? ENDINSTRUCTION ASSISTANT:
 ```
 
+*Achtung: Leider hat sich beim Trainieren ein Schreibfehler im Systemprompt eingeschlichen ("ENDINCSTRUCTION"), der in der nächsten Modellversion behoben werden wird. Für optimale Ergebnisse sollte der Schreibfehler im Prompt übernommen werden. In der Userprompt ist "ENDINSTRUCTION" korrekt geschrieben.*
+
 Modellantwort:
 ```
 Mit den gegebenen Informationen ist diese Frage nicht zu beantworten.
